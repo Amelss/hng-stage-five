@@ -4,19 +4,23 @@ document.addEventListener("DOMContentLoaded", function () {
   let desktopStream;
   const cameraToggle = document.getElementById("camera-toggle");
   const audioToggle = document.getElementById("audio-toggle");
+  const settingsExit = document.getElementById("settings-exit"); 
 
-cameraToggle.addEventListener("change", function () {
-  if (this.checked) {
-    alert("Camera Permission Requested");
-  }
-});
+  cameraToggle.addEventListener("change", function () {
+    if (this.checked) {
+      alert("Camera Permission Requested");
+    }
+  });
 
-audioToggle.addEventListener("change", function () {
-  if (this.checked) {
-    alert("Audio Permission Requested");
-  }
-});
-
+  audioToggle.addEventListener("change", function () {
+    if (this.checked) {
+      alert("Audio Permission Requested");
+    }
+  });
+    
+    settingsExit.addEventListener("click", function () {
+      window.close(); 
+    });
 
   async function startRecording() {
     try {
