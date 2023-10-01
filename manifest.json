@@ -3,6 +3,10 @@
   "name": "Help Me Out Extension",
   "description": "An extension that lets you record your screen",
   "version": "1.0",
+  "permissions": 
+    [
+        "activeTab"
+    ],
   "action": {
     "default_popup": "/popup/popup.html",
     "default_icon": "favicon.png"

@@ -15,6 +15,7 @@ h1 {
   width: 300px;
   height: 439px;
   padding: 10px;
+  
 }
 .logo-head {
   display: flex;
@@ -140,8 +141,8 @@ h1 {
   opacity: 70%;
 }
 
-/* .stop-btn{
-  visibility: hidden;
+.stop-btn{
+  display: none;
 }
 
 .record-btns{
@@ -150,8 +151,8 @@ h1 {
 
 .stop-record-btn{
     background-color: rgb(214, 16, 16);
-    position: absolute;
-} */
+ 
+}
 
 .download-btn {
   text-align: center;
