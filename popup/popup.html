@@ -10,6 +10,12 @@
       href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <title>Help Me Out Extension</title>
   </head>
   <body>
@@ -36,25 +42,77 @@
       <div class="subtitle">
         <p>This extension helps you record and share help videos with ease.</p>
       </div>
-<div class="tab-content">
-        <div class="full-screen">
-            <img src="/assets/monitor.png" alt="monitor" class="monitor">
+      <div class="components">
+        <div class="tab-content">
+          <div class="full-screen">
+            <img src="/assets/monitor.png" alt="monitor" class="monitor" />
             <p class="full-screen-content">Full screen</p>
-        </div>
-        <div class="tab">
-            <img src="/assets/copy.png" alt="current tab" class="current-tab">
+          </div>
+          <div class="tab">
+            <img src="/assets/copy.png" alt="current tab" class="current-tab" />
             <p class="tab-content-text">Current Tab</p>
+          </div>
         </div>
+
+        <div class="camera-audio">
+          <div class="camera-option">
+            <div class="camera">
+              <img
+                src="/assets/video-camera.png"
+                alt="video camera"
+                class="camera-img"
+              />
+              <p class="camera-text">Camera</p>
+            </div>
+            <div class="toggle">
+              <input type="checkbox" name="camera-toggle" id="camera-toggle" />
+            </div>
+          </div>
+          <div class="audio-option">
+            <div class="audio">
+              <img
+                src="/assets/microphone.png"
+                alt="microphone"
+                class="audio-img"
+              />
+              <p class="audio-text">Audio</p>
+            </div>
+            <div class="toggle">
+              <input type="checkbox" name="audio-toggle" id="audio-toggle" />
+            </div>
+          </div>
+        </div>
+        <div class="record-btns">
+            <div class="btn">
+          <button
+            type=""
+            name="start-record"
+            value="start-record"
+            class="start-record-btn"
+          >
+            Start Recording
+          </button>
+        </div>
+         <!-- <div class="btn stop-btn">
+          <button
+            type=""
+            name="stop-record"
+            value="stop-record"
+            class="stop-record-btn"
+          >
+            Stop Recording
+          </button>
+        </div> -->
+        </div>
+        <div class="download">
+           <button class="download-btn">Download Recording</button> 
+        </div>
+        
+        
+
+
+      </div>
     </div>
-
-
-
-
-
-
-
-    </div>
-
     <script src="popup.js"></script>
   </body>
 </html>
