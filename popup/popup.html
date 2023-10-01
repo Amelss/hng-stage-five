@@ -1,13 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="popup.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="popup.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Help Me Out Extension</title>
-</head>
-<body>
-    <h1>I hope this works!</h1>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="logo-head">
+          <img src="/assets/favicon-32.png" alt="logo" class="logo" />
+          <h1 class="title">HelpMeOut</h1>
+        </div>
+
+        <div class="settings">
+          <img
+            src="/assets/setting-2.png"
+            alt="settings"
+            class="settings-cog"
+          />
+          <img
+            src="/assets/close-circle.png"
+            alt="close button"
+            class="settings-exit"
+          />
+        </div>
+      </div>
+      <div class="subtitle">
+        <p>This extension helps you record and share help videos with ease.</p>
+      </div>
+    </div>
+
     <script src="popup.js"></script>
-</body>
+  </body>
 </html>

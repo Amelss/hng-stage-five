@@ -1,0 +1,39 @@
+body{
+    background-color: white;
+    font-family: 'Sora', sans-serif;
+}
+
+h1{
+    color: #100A42;
+}
+.container{
+    width: 300px;
+    height: 439px;
+}
+.logo-head{
+ display: flex;
+ align-items: center;
+}
+.logo{
+    width: 30px;
+}
+.settings-cog, .settings-exit{
+    width: 20px;
+}
+
+.title{
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subtitle{
+    color: #413C6D;
+    padding: 10px;
+    font-size: 14px;
+}
