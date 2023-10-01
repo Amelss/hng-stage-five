@@ -11,20 +11,14 @@ async function startRecording() {
     });
     mediaRecorder = new MediaRecorder(stream);
 
-    // Event listener to handle dataavailable event and save recorded chunks
     mediaRecorder.ondataavailable = (e) => {
       if (e.data.size > 0) {
         recordedChunks.push(e.data);
       }
     };
 
-    // Event listener to handle stop event and display the recorded video
     mediaRecorder.onstop = () => {
-      const recordedBlob = new Blob(recordedChunks, { type: "video/webm" });
-      const videoUrl = URL.createObjectURL(recordedBlob);
-      const recordedVideo = document.getElementById("recorded-video");
-      recordedVideo.src = videoUrl;
-      recordedVideo.style.display = "block";
+      document.getElementById("download-button").style.display = "block";
     };
 
     mediaRecorder.start();
@@ -39,8 +33,8 @@ async function startRecording() {
 function stopRecording() {
   if (mediaRecorder && mediaRecorder.state !== "inactive") {
     mediaRecorder.stop();
+    // Hide the stop button after stopping recording
     document.getElementById("stop-record-button").style.display = "none";
-    document.getElementById("download-button").style.display = "block"; // Show the download button after stopping recording
   }
 }
 
@@ -67,4 +61,6 @@ startRecordButton.addEventListener("click", startRecording);
 stopRecordButton.addEventListener("click", stopRecording);
 downloadButton.addEventListener("click", downloadRecording);
 
-
+// Hide the download and stop buttons initially
+document.getElementById("download-button").style.display = "none";
+document.getElementById("stop-record-button").style.display = "none";

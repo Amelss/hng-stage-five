@@ -142,7 +142,7 @@ h1 {
 }
 
 .stop-btn{
-  display: none;
+
 }
 
 .record-btns{
@@ -174,7 +174,6 @@ h1 {
 
 .download {
   text-align: center;
-  display: none;
   cursor: pointer;
 }
 .toggle {

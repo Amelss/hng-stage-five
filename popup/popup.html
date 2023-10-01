@@ -1,91 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="popup.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <title>Help Me Out Extension</title>
-  </head>
-  <body>
-    <div class="container" id="modal-container">
-      <div class="header">
-        <div class="logo-head">
-          <img src="/assets/favicon-32.png" alt="logo" class="logo" />
-          <h1 class="title">HelpMeOut</h1>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="popup.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <title>Help Me Out Extension</title>
+</head>
+<body>
+  <div class="container" id="modal-container">
+    <div class="header">
+      <div class="logo-head">
+        <img src="/assets/favicon-32.png" alt="logo" class="logo" />
+        <h1 class="title">HelpMeOut</h1>
+      </div>
+      <div class="settings">
+        <img src="/assets/setting-2.png" alt="settings" class="settings-cog" />
+        <img src="/assets/close-circle.png" alt="close button" class="settings-exit" />
+      </div>
+    </div>
+    <div class="subtitle">
+      <p>This extension helps you record and share help videos with ease.</p>
+    </div>
+    <div class="components">
+      <div class="tab-content">
+        <div class="full-screen">
+          <img src="/assets/monitor.png" alt="monitor" class="monitor" />
+          <p class="full-screen-content">Full screen</p>
         </div>
-
-        <div class="settings">
-          <img
-            src="/assets/setting-2.png"
-            alt="settings"
-            class="settings-cog"
-          />
-          <img
-            src="/assets/close-circle.png"
-            alt="close button"
-            class="settings-exit"
-          />
+        <div class="tab">
+          <img src="/assets/copy.png" alt="current tab" class="current-tab" />
+          <p class="tab-content-text">Current Tab</p>
         </div>
       </div>
-      <div class="subtitle">
-        <p>This extension helps you record and share help videos with ease.</p>
+      <div class="camera-audio">
+        <div class="camera-option">
+          <div class="camera">
+            <img src="/assets/video-camera.png" alt="video camera" class="camera-img" />
+            <p class="camera-text">Camera</p>
+          </div>
+          <div class="toggle">
+            <input type="checkbox" name="camera-toggle" id="camera-toggle" />
+            <span class="toggler"></span>
+          </div>
+        </div>
+        <div class="audio-option">
+          <div class="audio">
+            <img src="/assets/microphone.png" alt="microphone" class="audio-img" />
+            <p class="audio-text">Audio</p>
+          </div>
+          <div class="toggle">
+            <input type="checkbox" name="audio-toggle" id="audio-toggle" />
+            <span class="toggler"></span>
+          </div>
+        </div>
       </div>
-      <div class="components">
-        <div class="tab-content">
-          <div class="full-screen">
-            <img src="/assets/monitor.png" alt="monitor" class="monitor" />
-            <p class="full-screen-content">Full screen</p>
-          </div>
-          <div class="tab">
-            <img src="/assets/copy.png" alt="current tab" class="current-tab" />
-            <p class="tab-content-text">Current Tab</p>
-          </div>
-        </div>
-
-        <div class="camera-audio">
-          <div class="camera-option">
-            <div class="camera">
-              <img
-                src="/assets/video-camera.png"
-                alt="video camera"
-                class="camera-img"
-              />
-              <p class="camera-text">Camera</p>
-            </div>
-            <div class="toggle">
-              <input type="checkbox" name="camera-toggle" id="camera-toggle" />
-              <span class="toggler"></span>
-            </div>
-          </div>
-          <div class="audio-option">
-            <div class="audio">
-              <img
-                src="/assets/microphone.png"
-                alt="microphone"
-                class="audio-img"
-              />
-              <p class="audio-text">Audio</p>
-            </div>
-            <div class="toggle">
-              <input type="checkbox" name="audio-toggle" id="audio-toggle" />
-              <span class="toggler"></span>
-            </div>
-          </div>
-        </div>
-        <div class="record-btns">
-            <div class="btn">
+      <div class="record-btns">
+        <div class="btn">
           <button
             type=""
             name="start-record"
@@ -96,29 +72,26 @@
             Start Recording
           </button>
         </div>
-         <div class="stop-btn">
+        <div class="stop-btn">
           <button
             type=""
             name="stop-record"
             value="stop-record"
             class="stop-record-btn"
             id="stop-record-button"
+            style="display: none;"
           >
             Stop Recording
           </button>
         </div>
-        </div>
-        <div class="download">
-           <button class="download-btn" id="download-button">Download Recording</button> 
-        </div>
-        
-        
-
-
       </div>
+      
     </div>
+    <div class="download">
+        <div id="download-container"></div>
+      </div>
+  </div>
 
-  
-    <script src="popup.js"></script>
-  </body>
+  <script src="popup.js"></script>
+</body>
 </html>
