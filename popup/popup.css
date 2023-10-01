@@ -47,3 +47,33 @@ h1 {
   color: #413c6d;
   font-size: 14px;
 }
+
+.tab-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.monitor, .current-tab{
+    width: 30px;
+}
+
+.tab-content, .full-screen-content{
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+.tab{
+    margin-left: 35px;
+}
+.tab-content-text{
+    font-weight: 600;
+    color: #100a42;
+}
+
+.full-screen-content{
+color: #928FAB;
+font-weight: 500;
+}
