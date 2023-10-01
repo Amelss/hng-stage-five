@@ -1,42 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
- 
-
   let mediaRecorder;
   let recordedChunks = [];
   let desktopStream;
   const cameraToggle = document.getElementById("camera-toggle");
   const audioToggle = document.getElementById("audio-toggle");
 
- 
-  async function startCameraAccess() {
-    try {
-      const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-     
-    } catch (error) {
-      console.error("Error accessing camera:", error);
-    }
-  }
-
-
-  const startCameraButton = document.getElementById("camera-toggle");
-  startCameraButton.addEventListener("click", startCameraAccess);
-
-
-  function updateToggleButtonPosition(toggleInput) {
-    const toggler = toggleInput.nextElementSibling.querySelector(".toggler");
-    toggler.style.left = toggleInput.checked ? "22px" : "2px";
-  }
-
-
   cameraToggle.addEventListener("change", function () {
-    updateToggleButtonPosition(this);
-    console.log("camera button clicked");
+    alert("Camera Permission Requested");
   });
 
   audioToggle.addEventListener("change", function () {
-    updateToggleButtonPosition(this);
-    console.log("audio button clicked");
+    alert("Audio Permission Requested");
   });
+
 
   async function startRecording() {
     try {
