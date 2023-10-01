@@ -5,13 +5,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const cameraToggle = document.getElementById("camera-toggle");
   const audioToggle = document.getElementById("audio-toggle");
 
-  cameraToggle.addEventListener("change", function () {
+cameraToggle.addEventListener("change", function () {
+  if (this.checked) {
     alert("Camera Permission Requested");
-  });
+  }
+});
 
-  audioToggle.addEventListener("change", function () {
+audioToggle.addEventListener("change", function () {
+  if (this.checked) {
     alert("Audio Permission Requested");
-  });
+  }
+});
 
 
   async function startRecording() {
